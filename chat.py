@@ -12,7 +12,7 @@ from chatbot import RetrievalAssistant, Message
 redis_client = get_redis_connection()
 
 # Set instruction
-openai.api_key="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"
+openai.api_key=st.secrets["OPENAI_API_KEY"]
 # System prompt requiring Question and Year to be extracted from the user
 system_prompt = '''
 You are a helpful HVAC knowledge base assistant. You need to capture a Question and Model Number from each customer.
