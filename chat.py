@@ -12,7 +12,7 @@ from chatbot import RetrievalAssistant, Message
 redis_client = get_redis_connection()
 
 # Set instruction
-#openai.api_key=st.secrets["OPENAI_API_KEY"]
+openai.api_key=st.secrets["OPENAI_API_KEY"]
 
 # System prompt requiring Question and Year to be extracted from the user
 system_prompt = '''
@@ -55,7 +55,7 @@ def query(question):
 prompt = st.text_input(f"What do you want to know: ", key="input")
 
 if st.button('Submit', key='generationSubmit'):
-    OPENAI_API_KEY="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"
+    
     
     # Initialization
     if 'chat' not in st.session_state:
