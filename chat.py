@@ -12,7 +12,8 @@ from chatbot import RetrievalAssistant, Message
 redis_client = get_redis_connection()
 
 # Set instruction
-openai.api_key=st.secrets["OPENAI_API_KEY"]
+#openai.api_key=st.secrets["OPENAI_API_KEY"]
+openai.api_key="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"
 # System prompt requiring Question and Year to be extracted from the user
 system_prompt = '''
 You are a helpful HVAC knowledge base assistant. You need to capture a Question and Model Number from each customer.
@@ -37,8 +38,8 @@ st.set_page_config(
     page_title="Example Daikin Chatbot",
     page_icon=":robot:"
 )
-
-st.title('Gardiner Daikin Knowledge Base')
+st.image('logo-red.png')
+st.title('Daikin Knowledge Base')
 st.subheader("Let me help you with your Daikin Product")
 
 if 'generated' not in st.session_state:
